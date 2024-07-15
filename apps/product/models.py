@@ -24,3 +24,7 @@ class Food(models.Model):
     image = models.ImageField(upload_to='food_images', null=True, blank=True)
     gram = models.IntegerField(verbose_name="Граммовка", default=0)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='foods')
+
+
+def __str__(self):
+    return self.name
