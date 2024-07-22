@@ -8,10 +8,10 @@ class IndexView(TemplateView):
 
 
 class AboutUsView(TemplateView):
-    template_name = "page/about_us.html"
+    template_name = "pages/about_us.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["about_us"] = AboutUs.object.first()
-        context["employees"] = Employees.object.all()
+        context["about_us"] = AboutUs.objects.first()
+        context["employees"] = Employees.objects.all()
         return context
