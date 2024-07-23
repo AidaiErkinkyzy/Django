@@ -11,3 +11,10 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Food)
 class FoodAdmin(admin.ModelAdmin):
     list_display = ("name", "description", "price", "category", "image", "gram")
+
+
+
+@admin.register(SpecialOffer)
+class FoodAdmin(admin.ModelAdmin):
+    list_display = ['id', 'food', 'start_date', 'end_date', 'description']
+

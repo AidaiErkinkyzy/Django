@@ -240,61 +240,24 @@
       <div class="clear"></div>
       <div class="block2">
         <div class="title"><span>25,000</span> reasons not to cook</div>
-        <p>with 25,000 restaurant menus in  more than 100 US 
+        <p>with 25,000 restaurant menus in  more than 100 US
   cities, we give you over a million dishes to choose from</p>
         <span>Enjoy.</span>
-      </div>      
+      </div>
     </div>
     <h3 class="mb0">This week`s specials:<span class="col1">free shipping on orders over $99</span></h3>
     <div id="owl1">
+
+      {% for offer in special_offers %}
+
       <div class="item"><a href="#">
-          <div class="bord_img"><span></span><img src="images/page1_img1.jpg" alt=""></div>
+          <div class="bord_img"><span></span><img src="{{ offer.food.image.url }}" alt=""></div>
           <div class="text1">Chinese <br>food<span class="col1">$15.99</span></div>
         </a></div>
-      <div class="item"><a href="#">
-          <div class="bord_img"><span></span><img src="images/page1_img2.jpg" alt=""></div>
-          <div class="text1">seafood <br>pasta<span class="col1">$15.99</span></div>
-        </a></div>
-      <div class="item"><a href="#">
-          <div class="bord_img"><span></span><img src="images/page1_img3.jpg" alt=""></div>
-          <div class="text1">Seafood <br>Paella<span class="col1">$15.99</span></div>
-        </a></div>
-      <div class="item"><a href="#">
-          <div class="bord_img"><span></span><img src="images/page1_img4.jpg" alt=""></div>
-          <div class="text1">fast <br>food<span class="col1">$15.99</span></div>
-        </a></div>
-      <div class="item"><a href="#">
-          <div class="bord_img"><span></span><img src="images/page1_img5.jpg" alt=""></div>
-          <div class="text1">Lamb <br>steak<span class="col1">$15.99</span></div>
-        </a></div>
-      <div class="item"><a href="#">
-          <div class="bord_img"><span></span><img src="images/page1_img6.jpg" alt=""></div>
-          <div class="text1">Chocolate <br>cupcakes<span class="col1">$15.99</span></div>
-        </a></div>
-        <div class="item"><a href="#">
-          <div class="bord_img"><span></span><img src="images/page1_img1.jpg" alt=""></div>
-          <div class="text1">Chinese <br>food<span class="col1">$15.99</span></div>
-        </a></div>
-      <div class="item"><a href="#">
-          <div class="bord_img"><span></span><img src="images/page1_img2.jpg" alt=""></div>
-          <div class="text1">seafood <br>pasta<span class="col1">$15.99</span></div>
-        </a></div>
-      <div class="item"><a href="#">
-          <div class="bord_img"><span></span><img src="images/page1_img3.jpg" alt=""></div>
-          <div class="text1">Seafood <br>Paella<span class="col1">$15.99</span></div>
-        </a></div>
-      <div class="item"><a href="#">
-          <div class="bord_img"><span></span><span></span><img src="images/page1_img4.jpg" alt=""></div>
-          <div class="text1">fast <br>food<span class="col1">15.99</span></div>
-        </a></div>
-      <div class="item"><a href="#">
-          <div class="bord_img"><span></span><img src="images/page1_img5.jpg" alt=""></div>
-          <div class="text1">Lamb <br>steak<span class="col1">$15.99</span></div>
-        </a></div>
-      <div class="item"><a href="#">
-          <div class="bord_img"><span></span><img src="images/page1_img6.jpg" alt=""></div>
-          <div class="text1">Chocolate <br>cupcakes<span class="col1">$15.99</span></div>
-        </a></div>
+
+      {% endfor %}
+
+
     </div>
   </div>
   </div>
@@ -302,10 +265,10 @@
 
 <!--==============================footer=================================-->
 
-  <footer>   
+  <footer>
     <div class="container_12">
       <div class="grid_12">
-        
+
         <a href="index.html" class="f_logo">
           <img src="images/f_logo.png" alt="">
         </a>
@@ -313,9 +276,8 @@
         &copy; <span id="copyright-year"></span> <br> <a href="index-5.html">Privacy Policy</a> <!--{%FOOTER_LINK} --><div></div>
         </div>
       </div>
-    </div>  
+    </div>
   </footer>
-  
+
 </body>
 </html>
-
